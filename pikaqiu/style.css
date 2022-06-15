@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.skin {
+  position: relative;
+  height: 100vh;
+  background: #ffe000;
+}
+.nose {
+  position: relative;
+  left: 50%;
+  top: 150px;
+  margin-left: -20px;
+  width: 0px;
+  height: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.yuan {
+  position: absolute;
+  background-color: black;
+  width: 20px;
+  height: 6px;
+  top: -16px;
+  left: -10px;
+  border-radius: 10px 10px 0 0;
+}
+.eye {
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  margin-left: -40px;
+  border-radius: 50%;
+  background: #2e2e2e;
+}
+.eye::before {
+  content: "";
+  display: block;
+  border: 3px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  right: -8px;
+}
+.eye.left {
+  transform: translateX(-100px);
+}
+.eye.right {
+  transform: translateX(100px);
+}
+.face {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #000000;
+  position: absolute;
+  left: 50%;
+  top: 235px;
+  margin-left: -53px;
+  background: #ff0000;
+  border-radius: 40px;
+}
+.face.left {
+  transform: translateX(-155px);
+}
+.face.right {
+  transform: translateX(155px);
+}
+.upperLip {
+  width: 180px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  margin-left: -100px;
+}
+.upperLip::before {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 25px;
+  border: 3px solid black;
+  border-top: none;
+  border-right: none;
+  border-bottom-left-radius: 90% 99%;
+  transform: rotate(-20deg);
+  background: #ffe000;
+  position: absolute;
+  left: 4px;
+  z-index: 5;
+}
+.upperLip::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 25px;
+  border: 3px solid black;
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 90% 99%;
+  transform: rotate(20deg);
+  background: #ffe000;
+  position: absolute;
+  right: 4px;
+  top: 0;
+  z-index: 5;
+}
+/*外面舌头*/
+.lowerLip {
+  position: absolute;
+  width: 124px;
+  height: 150px;
+  border: 2px solid #000;
+  background: #9d0512;
+  left: 50%;
+  top: 188px;
+  margin-left: -72px;
+  border-top: none;
+  border-bottom-left-radius: 62px 150px;
+  border-bottom-right-radius: 62px 150px;
+  overflow: hidden;
+}
+.lowerLip::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 200px;
+  border: 1px solid black;
+  left: 50%;
+  top: 20px;
+  margin-left: -70px;
+  border-radius: 190px;
+  background: #fc4653;
+}
+
+/*
+外面舌头做法2： 
+.lowerLip::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 1000px;
+  position: absolute;
+  border: 1px solid red;
+  bottom: 0;
+  left: 50%;
+  margin-left: -80px;
+  border-radius: 110px / 450px;
+  background: #9d0512;
+} */
